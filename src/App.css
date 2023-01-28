@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Karla', sans-serif;
+  font-style: normal;
+  background: #F5F7FB;
+}
+
+.start-pg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15%;
+}
+.quizzical {
+  color: #293264;
+  font-family: 'Karla';
+  margin-bottom: 1px;
+}
+.start-btn {
+  background: #4D5B9E;
+  color: white;
+  border: none;
+  margin-top: 15px;
+  border-radius: 15px;
+  padding: 15px 62px;
+  cursor: pointer;
+}
+.some-desc {
+  color: #293264;
+}
+
+/* QUESTIONS */
+.ques-pg {
+  border: solid;
+  margin: 30px 50px;
+  text-align: center;
+}
+.ques-ans {
+  color: #293264;
+}
+.ques-ans > p {
+  font-weight: bold;
+  color: #293264;
+}
+.opt-btn {
+  margin: 5px 5px;
+  color: #293264;
+  border: 1px solid #293264 ;
+  border-radius: 7px;
+}
+hr {
+  margin: 15px auto;
+}
