@@ -37,6 +37,7 @@ function Questions() {
   console.log(updatedData);
 
   function handleChange() {
+    //check answer btn
     setCheckAns((prev) => !prev);
     // console.log("change");
   }
@@ -62,27 +63,32 @@ function Questions() {
   return (
     <div className="ques-pg">
       {updatedData.map((q) => (
-        <div className="ques-ans">
+        <div className="ques-ans" key={q.id}>
           <p>{q.question}</p>
-          {q.incorrect_answers.map((o) => (
-            <button
-              className="opt-btn"
-              onClick={() => handleClick(q.id, o.id)}
-              // style={{background: checkAns ? q.correct_answer}}
-              style={{ background: o.isCheck ? "gray" : "" }}
-            >
-              {o.option}
-            </button>
-          ))}
+          <div className="opt-div">
+            {q.incorrect_answers.map((o) => (
+              <button
+                key={o.id}
+                className="opt-btn"
+                onClick={() => handleClick(q.id, o.id)}
+                // style={{background: checkAns ? q.correct_answer}}
+                // green color for correct answer - #94D7A2
+                // red color for incorrect answer - #F8BCBC
+                style={{ background: o.isCheck ? "#D6DBF5" : "" }}
+              >
+                {o.option}
+              </button>
+            ))}
+          </div>
           <hr />
         </div>
       ))}
-      <div>
-        <p>{checkAns && `You scored 3/5 correct answers`}</p>
-        <button onClick={handleChange}>
+      <p className="score-div">
+        {checkAns && `You scored 3/5 correct answers `}&nbsp;&nbsp;
+        <button onClick={handleChange} className="check-ans-btn">
           {checkAns ? "Play again" : "Check answers"}
         </button>
-      </div>
+      </p>
     </div>
   );
 }

@@ -12,7 +12,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 15%;
+  margin-top: 20%;
 }
 
 .quizzical {
@@ -38,16 +38,19 @@ body {
 
 /* QUESTIONS */
 .ques-pg {
-  border: solid;
-  margin: 30px 50px;
-  text-align: center;
+  /* border: solid; */
+  margin: 40px 60px;
+  text-align: left;
 }
 
 .ques-ans {
   color: #293264;
+  /* border: solid; */
+  font-size: x-large;
+
 }
 
-.ques-ans > p {
+.ques-ans>p {
   font-weight: bold;
   color: #293264;
 }
@@ -55,11 +58,43 @@ body {
 .opt-btn {
   margin: 5px 5px;
   color: #293264;
-  border: 1px solid #293264 ;
-  border-radius: 7px;
+  font-weight: 600;
+  border: 1px solid #293264;
+  border-radius: 10px;
+  font-size: 16px;
+  background: transparent;
+  padding: 5px 20px;
+  cursor: pointer;
+}
+
+.opt-div {
+  /* border: solid; */
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 hr {
   margin: 15px auto;
 }
 
+.score-div {
+  /* border: solid; */
+  margin-top: 30px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  color: #293264;
+  ;
+}
+
+.check-ans-btn {
+  font-size: 16px;
+  background: #4D5B9E;
+  color: white;
+  padding: 15px 35px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+}
